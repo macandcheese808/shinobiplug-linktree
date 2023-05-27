@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'basement';
+    src: url(../fonts/basement.otf);
+}
+
+:root {
+    --black-alternative: #24252a; 
+    --black: black;
+    --white: white;
+    --green: rgb(0, 222, 0);
+}
+
+.helper {
+    border: 2px solid blue
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    font-family: 'basement';
+}
+
+html {
+    font-family: 'basement';
+    font-size: 20px;
+}
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--black-alternative);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--white);
+    border-radius: 5rem;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.bg {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#preloader {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;   
+}
+
+.loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    /* Loader Color */
+    border-top: 12px solid #ff0000;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+  
+  /* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.titlebar {
+    font-size: 24px;
+}
+
+header {
+    width: 100%;
+    height: 20vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+.link {
+    width: 80%;
+    margin: 0 auto;
+    height: 10vh;
+
+    font-size: 16px;
+
+    background-color: black;
+    color: white;
+    border: white 2px solid;
+    border-radius: 50px;
+    margin-top: 43px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.link:nth-child(1) {
+    border: red 2px solid;
+    color: red;
+}
+
+.link:nth-child(2) {
+    border: rgb(0, 38, 255) 2px solid;
+    color: rgb(0, 38, 255);
+}
+
+.link:nth-child(3) {
+    border: rgb(0, 255, 64) 2px solid;
+    color: rgb(0, 255, 64);
+}
+
+.link:nth-child(4) {
+    border: rgb(255, 0, 170) 2px solid;
+    color: rgb(255, 0, 170);
+}
+
+.link:hover {
+    border: 2px solid red;
+    color: red;
+    transition: 600ms ease;
+}
